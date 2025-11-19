@@ -1,7 +1,7 @@
 import math
 
 
-def solve_cubic_general(a, b, c, d):
+def cubic_solve(a, b, c, d):
     # приводим уравнение к приведённому виду: y^3 + p*y + q = 0
     # подстановка: x = y - b/(3a)
     if a == 0:
@@ -64,6 +64,6 @@ test_cases = [
 ]
 
 for i, (a, b, c, d) in enumerate(test_cases, 1):
-    roots = solve_cubic_general(a, b, c, d)
+    roots = cubic_solve(a, b, c, d)
     print(f"уравнение: {a}x^3 + {b}x^2 + {c}x + {d} = 0")
     print(f"корни: {roots}\n")
